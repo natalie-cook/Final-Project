@@ -1,0 +1,251 @@
+\documentclass[12pt,english]{article}
+\usepackage{mathptmx}
+\usepackage{dcolumn}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{RGB}{0.,0.,139.}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{lipsum}
+
+\usepackage[authoryear]{natbib}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage[flushleft]{threeparttable}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{pdflscape}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=true,pdfborder={0 0 0},backref=false,
+ colorlinks,citecolor=black,filecolor=black,
+ linkcolor=black,urlcolor=black]
+ {hyperref}
+\usepackage[all]{hypcap} % Links point to top of image, builds on hyperref
+\usepackage{breakurl}    % Allows urls to wrap, including hyperref
+
+\linespread{2}
+
+\begin{document}
+
+\begin{singlespace}
+\title{Returns to Language Skills in the US Labor Market\thanks{Acknowledgements here, if any.}}
+\end{singlespace}
+
+\author{Natalie Cook\thanks{Department of Economics, University of Oklahoma.\
+E-mail~address:~\href{mailto:student.name@ou.edu}{natalie.c.cook-1@ou.edu}}}
+
+% \date{\today}
+\date{May 10, 2021}
+
+\maketitle
+
+
+\vfill{}
+
+
+\pagebreak{}
+
+
+\section{Introduction}\label{sec:intro}
+Returns to language are often cited colloquially as highly significant in a increasingly interconnected global economy. There is a large body of research which focuses on the positive economic effects of language acquisition in migrants. The ability of a migrant adult or child to pick up the language of their new country is often a key factor in their successful assimilation and subsequent positive outcomes. There is also much research which seeks to study the returns to bilingualism more generally. However, many researchers (myself included) encounter limitations because of the data that exists. There is very little data which specifically captures native English speakers who have acquired skill in an additional language.  
+
+There are many policy issues which can be informed by this type of research. Examples include foreign language requirements in education, and official language distinctions at a federal level. Additionally, individuals face a personal decision regarding their investment in language acquisition. The human capital model is often used to shed light on these decisions and capture the effects of language within an economic framework. 
+
+This analysis seeks to explore the impact of language skills on earnings for a specific subset of the population within the US labor market. Although the original intent was to capture those individuals whose native language is English and have developed skills in an additional foreign language, the reality of the available data inhibits this. In actuality those individuals who are studied likely speak a non-English language as their mother tongue, and have acquired English as their second language. This limitation caused by the data is common among the research.
+
+This analysis is divided into the following sections. There is a literature review which presents the existing research regarding the topic. This is followed by a presentation of the data employed in this analysis, and the methods used on that data. Finally there is a section which details the results of this analysis, and a conclusion which presents final thoughts. 
+
+\section{Literature Review}\label{sec:litreview}
+
+Albert Breton was among the first to employ the human capital model as a means of understand the economic benefits of language skills. His paper is a fascinating mix of micro and macro economic theory which seeks to apply the tools of economic theory to the complex world of language and culture. He described it as something that could be invested in using . He distinguished between physical capital such as machinery and knowledge or human capital based on their economic status. He argues that while physical capital can be sold, human capital can only be rented. He argues that the benefit must be calculated as a difference between the investment required to achieve the language and the return that is realized as result of the language. He points out that the return on investment for a mother tongue is very high. This is a unique way of thinking about basic literacy. He concedes that return on investment for additional languages is much more difficult to qualtify. (\citet{Canada})
+
+
+An analysis conducted by Isphording and Sinning used American Community Survey data from 2010 to study returns to language skills. Their focus was on immigrant populations, and they took special care to differentiate between the experiences of migrants and their children. They use an instrumental variable to address endogeneity which looks at differences in language acquisition for immigrants from English speaking and non English speaking countries. Their analysis found significant returns to language skills for both adult and child migrants. For the children, they found that education was very important to language acquisition and had an effect on wages. They use duration of residence quite a bit to add nuance to their analysis and better understand the relationship between language skills and earnings. Despite the common background differences between adult and child migrants, they did not find a significant difference between their returns to language skills.  (\citet{Rhur})
+
+Williams' study regarding returns to language skills utilizes the European Community Household Panel 1994-1999 to study individuals from 14 countries in Western Europe. This research stands out from the rest because its scope includes multiple countries. The researchers prioritize actual language use in a job setting over reported proficiency which is also unique. They found large variance across countries regarding the proportion of individuals that reported using a second language at work. This ranged from 6 percent in the UK to 78 percent Luxembourg. Notably, the most common foreign language that workers reported using at their jobs was English, which was followed by French. The rate of second language usage was highest in the business sector for most countries. Using a fixed effects model they found more modest returns to language than their original OLS model which they attribute to productivity differentials. They find that returns are generally around 3 to 5 percent.  (\citet{Western})
+
+Lopez conducted a foundational study in 1999 using the National Adult Literacy Survey of 1992 from the US Department of Education. 
+He uses his findings to argue against making English the official language of the US or over-emphasizing English proficiency. He found that bilingual individuals earned slightly more than those who spoke only English, given a set of controls. He encounters a common issue with the data: individuals who originally speak English and learn an addition language are excluded because language questions are only posed to language minority individuals. Therefore, although he uses the term bilingual in his analysis, he is really referring to individuals belonging to a language minority who have maintained their native language and then developed English skills. His most significant result was a difference between those whose only language is non-English, and those who speak English in addition to their native language. He also found that the degree of proficiency was more significant that the particular language an individual was proficient in. He calls for additional researched focused on understanding the outcomes of native English speakers who learn an additional language, as opposed to language minority individuals who learn English. (\citet{Lopez})
+
+More recent literature provides an answer to this call.Researchers at the Federal Reserve Bank of Philadelphia investigated the economic returns associated with speaking a foreign language. Their empirical analysis found that the hourly earnings of individuals who spoke a foreign language were more than 2 percent higher than the earnings of those who did not. Their research is highly relevant to this analysis because they seek to understand the returns to speaking a second language for college graduates who are native speakers of English. This research stands out from the rest, because the vast majority of the literature focuses on returns to learning English for people who have migrated to the US. They overcame one of the core challenges of this inquiry which is finding a data set which captures native English speakers who also have learned a second language and includes additional information on the individual including academic performance. The data set that they used is called the "Baccalaureate and Beyond Longitudinal Study" from the National Center for Education Statistics for the years 1992, 1993, 1994, and 1997 which included 9274 individuals. (\citet{Fed})
+
+Their analysis included extensive work to control for as many additional factors as possible. They use control variables to mitigate selection bias, and address ability bias using SAT scores, GPA, parental education, and quality of the college attended. They control for the major chosen by the student which may serve as an indicator of career preferences. They use the longitudinal dimension of the data set to account for constant unobserved individual characteristics by comparing earnings growth for individuals between 1993 and 1997. Finally, they employ instrumental variables to address the problem of selection by earnings. These instruments are high school foreign language requirements in the state where the individual attended high school, and college second language requirements. These inclusion of these instrumental variables in particular led to increased estimates of the returns to a second language. The estimates with the instrumental variables had high standard errors, but calculated returns as being between 14 and 30 percent. (\citet{Fed})
+
+
+
+\section{Data}\label{sec:data}
+
+The primary data source for this research is the 2018 American Community Survey from the US Census Bureau. An extract was creating using IPUMS in order to pull the relevant variables. The dependent variable for this analysis is income. The Wage and Salary variable measures the individual's total pre-tax wage and salary income for the previous year. This was chosen to most accurately capture explicit and conventional earnings. 
+
+Language is the primary variable of interest. This is measured in a notable way. For the ACS language records the language that the respondent spoke at home, particularly if a language other than English was spoken. In practice, those individuals that are recorded as speaking another language in addition to English speak that language as their mother tongue, and have learned English as a second language. There are 94 unique languages recorded by this variable. 
+
+Speaks English is a categorical variable which was condensed into a binary for this analysis in order to subset the data to include only those individuals who spoke English plus an additional language. Employment status is also a categorical variable that indicates whether the individual is a part of the workforce. This was used to filter the data to only include working individuals.
+
+Industry is a variable which records the industry in which the individual performed their occupation. There are many hundred unique industries which can be condensed into greater sectors. This variable serves as a control and is also involved as an interaction effect with language in one of the models that follow. 
+
+A number of common control variables were included in the model. Age is continuous and is measured conventionally in years. Race is a categorical variable which is comprised of 9 categories where white is set as the reference group. Sex is a binary categorical variable which is measured conventionally with male as the base group. Place of work: state was chosen as a control for regional differences. It is a categorical variable which records the state in which the individual works. 
+
+I used IPUMS to make an extract with some variables, then "ipumsr" to load that extract into R with the codebook. The data were filtered to only include individuals who speak English, have a positive income, and are employed. Variables were converted to factors where appropriate and a logwage variable was created from the original income variable. Finally, a binary variable was created to distinguish between those who speak only English versus blingual individuals, and an attempt was made to condense the number of levels in the categorical variable for industry.
+
+
+\section{Empirical Methods}\label{sec:methods}
+The primary empirical models for the analysis are shown in the following equations:
+\begin{equation}
+      LogIncome=\beta_1 Language +\beta_{2j}Industry_{j}+\beta_3 Location+\beta_4 Age + \beta_5 Sex + \beta_7 Race
+\end{equation}
+\begin{equation}
+    LogIncome=\beta_{1i}Language_{i}+\beta_{2j}Industry_{j}+\beta_3 Location+\beta_4 Age + \beta_5 Sex + \beta_6 Race
+\end{equation}
+\begin{equation}
+  LogIncome=\beta_{1ii}Language_{i}*Industry_{j}+\beta_3 Location+\beta_4 Age + \beta_5 Sex + \beta_6 Race  
+\end{equation}
+
+The dependent variable remains the same across the three models. It is a log transformation of the income variable which is continuous. The parameter of interest is largely the same as well. It the coefficient associated with the language variable. The three models also share identical control variables for location, age, sex, and race. Location, sex, and race are factor or categorical variables. Age is numeric. The models are evaluated using Ordinary Least Squares Regression. 
+
+In the first model, language is a binary which measures whether or not an individual speaks any additional language besides English. In this first model, the industry variable is a vector which is comprised of many industries grouped into sectors. The first model is designed to calculate whether speaking any additional language is correlated with either a positive or negative effect on log income. 
+
+The second model displays language as a vector, similar to the industry vector which is also included. Instead of simply measuring whether or not an individual speaks an additional language, this records which language in particular the individual speaks. In practice the model is comprised of a long list of dummy variables which are coded with 0's and 1's to indicate which language is spoken. This second model is designed to display the income effects of each language. Both the sign and magnitude of the effects will be interesting to study. 
+
+Finally, the third model includes both the language and industry vectors, but creates an interaction term by multiplying them together. This third model is designed to calculate the effect of working in a given industry while speaking a certain language for each of the possible industry-language combinations. In theory the sign and magnitude of these coefficients could indicate which industry-language combinations are correlated with the greatest income effects. 
+
+
+\section{Research Findings}\label{sec:results}
+Model 1 which calculated logwage as a function of the binary language variable showed a negative return to language of -8.347e-02 or a income decrease of 8 percent as a result of speaking a second language.  
+
+Model 2 which included a vector of languages showed some negative and some positive coefficients on languages as shown in \ref{sec:figTables}. The languages with the most positive and most negative income effects were unexpected. This is where I realized that this model is calculating correlation and that that should not be mistaken for causation. The languages with a greater number of speakers fell in the middle more or less. Obviously the results cannot be interpreted as: learning Spanish will decrease my income by x percent. Instead this shows the effect of being a native Spanish speaker as well as all of the things that come with that that are not controlled for in this analysis. Unfortunately the income coefficients that are calculated most likely have little to do with the language a person speaks because the language variable does not measure whether the person uses it at their job. 
+
+There are no results for model 3. 
+
+The specifications of model 2 are reported in Table \ref{sec:figTables}.
+
+
+
+\section{Conclusion}\label{sec:conclusion}
+Although the decision to invest in the human capital of language acquisition can be understood as a policy question, it is also a personal decision. Unfortunately, this analysis is unable to answer the original intended research question because of the limitations of the data. Rather than uncovering the effects of learning a second language for native English speakers, this is in practice a study of non native English speakers. The vast majority of these individuals are immigrants who have learned English in addition to their native language. There are many intangible and un-quantifiable factors which influence the income of these individuals. Therefore, these particular results reflect correlation rather than causation even with the controls that are in place. 
+
+Based upon the research it seems that the use of instrumental variables as well as panel data can bolster the argument for causation. For further study of the original research question, it would be beneficial to find a data set similar to that used by the Federal Reserve Bank of Philadelphia's researchers in order to focus on native English speakers. Perhaps this data could be found at a university level. It is true that although much research exists surrounding surrounding immigrants in the US labor market, there is a gap when it comes to the income effects of a second language for native speakers. 
+
+
+
+ 
+
+
+\vfill
+\pagebreak{}
+\begin{spacing}{1.0}
+\bibliographystyle{jpe}
+\bibliography{References.bib}
+\addcontentsline{toc}{section}{References}
+\end{spacing}
+
+\vfill
+\pagebreak{}
+\clearpage
+
+
+
+%========================================
+% FIGURES AND TABLES 
+%========================================
+\section*{Figures and Tables}\label{sec:figTables}
+\addcontentsline{toc}{section}{Figures and Tables}
+%----------------------------------------
+% Figure 1
+%----------------------------------------
+
+\begin{table}[!htbp] \centering 
+  \caption{Results} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & \multicolumn{1}{c}{INCWAGE} \\ 
+\hline \\[-1.8ex] 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{1,415,468} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.192} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.192} \\ 
+Residual Std. Error & \multicolumn{1}{c}{60,158.470 (df = 1415068)} \\ 
+F Statistic & \multicolumn{1}{c}{841.972$^{***}$ (df = 399; 1415068)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+
+From Model (2)
+Top 10 Languages
+
+
+\begin{tabular}{ c|c|c }
+ Norwegian & 33902.169 & *** \\ 
+ Danish & 27607.179 & *** \\  
+ Finnish & 16713.981 & **\\
+ Swedish & 16655.653 & *** \\
+ Scandinavian & 15586.15 & *** \\
+ Greek & 10171.118 & *** \\
+ Dutch & 9716.079 & *\\
+ Dravidian & 8849.503 & ***\\
+ Turkish & 7673.172 & ***\\
+ Celtic & 7457.656 &** \\
+ \end{tabular}
+
+
+
+From Model (2)
+Bottom 10 Languages
+
+ \begin{center}
+\begin{tabular}{ c|c|c }
+ Eskimo & -15245.187 & *** \\ 
+ Burmese & -15373.305 & *** \\  
+ Other Persian Dialects & -17160.914 & ***\\
+ Filipino & -17196.568 & *** \\
+ Polynesian & -17636.477 & *** \\
+ Vietnamese & -17783.773 & *** \\
+ Yiddish & -19847.16 & ***\\
+ Tibetan & -20537.793 & ***\\
+ Other Malayan & -21324.491 & ***\\
+ Other East/Southeast Asian & -24714.3 &*** \\
+
+ 
+\end{tabular}
+\end{center}   
+
+From Model (2)
+Languages of Interest
+
+ \begin{center}
+\begin{tabular}{ c|c|c }
+ German & 6075.078 & *** \\ 
+ French & 5511.859 & *** \\  
+ Italian & 5313.502 & ***\\
+ Russian & 2610.832 & ** \\
+ Japanese & 1205.74 &  \\
+ Arabic & 564.516 &  \\
+ Korean & -7279.847 & ***\\
+ Chinese & -10832.88 & ***\\
+ Spanish & -12110.051 & ***\\
+
+\end{tabular}
+\end{center}   
+
+
+%----------------------------------------
+% Table 2
+%----------------------------------------
+\includegraphics[]{graph.pdf}
+
+
+
+
+\end{document}
